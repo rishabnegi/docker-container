@@ -1,0 +1,16 @@
+type Query {
+  readMe: String
+  readMeWithParam(name : String) : String
+  requestBodyTest(model : Model) : ResponsModel
+}
+
+input Model {
+  fName : String
+  lName : String
+}
+
+type ResponsModel{
+  fullName : String
+  testVariable : String
+  cities(filterCountry : String) : [String]
+}
